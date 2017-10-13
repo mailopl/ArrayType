@@ -1,0 +1,27 @@
+{
+    "name": "spacegrass/arraytype",
+    "description": "Enforces consistent types in arrays",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dallin",
+            "email": "dallinis@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Spacegrass\\ArrayType\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Spacegrass\\ArrayType\\": "tests"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0",
+        "phpunit/phpunit": "^6.4"
+    }
+}

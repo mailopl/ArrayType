@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="http://phpunit.de/phpunit.xsd"
+                backupGlobals="false"
+                bootstrap="vendor/autoload.php"
+                processIsolation="false"
+                colors="true"
+                beStrictAboutTestsThatDoNotTestAnything="false"
+                verbose="true">
+    <listeners>
+        <listener class="Tests\SMST\ProfilingTestListener" file="tests/ProfilingTestListener.php"/>
+        <listener class="Tests\SMST\MockeryCloseListener" file="tests/MockeryCloseListener.php"/>
+    </listeners>
+
+    <testsuite name="test">
+        <directory suffix="Test.php">tests</directory>
+    </testsuite>
+
+    <logging>
+        <log type="coverage-text" target="php://stdout"/>
+    </logging>
+
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+</phpunit>
