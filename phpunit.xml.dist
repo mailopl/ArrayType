@@ -7,10 +7,6 @@
                 colors="true"
                 beStrictAboutTestsThatDoNotTestAnything="false"
                 verbose="true">
-    <listeners>
-        <listener class="Tests\SMST\ProfilingTestListener" file="tests/ProfilingTestListener.php"/>
-        <listener class="Tests\SMST\MockeryCloseListener" file="tests/MockeryCloseListener.php"/>
-    </listeners>
 
     <testsuite name="test">
         <directory suffix="Test.php">tests</directory>

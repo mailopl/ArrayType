@@ -56,6 +56,10 @@ class ArrayTypeTest extends TestCase
                 ArrayType::DOUBLE,
                 [true, 0]
             ],
+            'non array in array list' => [
+                ArrayType::ARRAY,
+                [[], 0]
+            ],
         ];
     }
 
@@ -106,6 +110,10 @@ class ArrayTypeTest extends TestCase
                 ArrayType::BOOLEAN,
                 [true, false]
             ],
+            'arrays' => [
+                ArrayType::ARRAY,
+                [[]]
+            ]
         ];
     }
 

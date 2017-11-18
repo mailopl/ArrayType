@@ -10,6 +10,8 @@ class ArrayType
     const DOUBLE  = 'double';
     const BOOLEAN = 'boolean';
 
+    const ARRAY   = 'array';
+
     const SCALAR_TYPES = [
         self::STRING,
         self::INTEGER,
@@ -42,7 +44,7 @@ class ArrayType
      */
     private static function passes($item, string $type): bool
     {
-        if (self::requiresScalar($type)) {
+        if (self::requiresScalar($type) || is_array($item)) {
             return gettype($item) == $type;
         }
 
